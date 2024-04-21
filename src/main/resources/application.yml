@@ -1,0 +1,29 @@
+spring:
+  redis:
+    host: redis-16483.c1.us-east1-2.gce.redns.redis-cloud.com
+    port: 16483
+    password: rBeX3A6gc85rHgod2JW34hchwa7yFSIC
+    timeout: 3000  # Optional: Connection timeout in milliseconds
+    lettuce:
+      pool:
+        max-active: 8  # Optional: Maximum number of active connections in the pool
+        max-idle: 8  # Optional: Maximum number of idle connections in the pool
+        min-idle: 2  # Optional: Minimum number of idle connections in the pool
+        max-wait: -1  # Optional: Maximum time to wait for a connection from the pool (-1 = wait indefinitely)
+    ssl: false  # Optional: Enable SSL/TLS encryption for Redis communication
+    database: 0  # Optional: Redis database index
+
+  application:
+    name: webcrawl
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+    username: admin
+    password: 123456
+  h2:
+    console:
+      enabled: true
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update

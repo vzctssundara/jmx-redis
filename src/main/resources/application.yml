@@ -2,7 +2,7 @@ spring:
   redis:
     host: redis-16483.c1.us-east1-2.gce.redns.redis-cloud.com
     port: 16483
-    password: rBeX3A6gc85rHgod2JW34hchwa7yFSIC
+    password: nopassword
     timeout: 3000  # Optional: Connection timeout in milliseconds
     lettuce:
       pool:
